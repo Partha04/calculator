@@ -85,18 +85,21 @@ class _HomeState extends State<Home> {
 
   Widget buildButton(var str) {
     return new Expanded(
-        child: OutlineButton(
-      shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(10.0)),
+        child: Container(
+          color: Colors.blue[200],
+          child: OutlineButton(
+      shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(15.0)),
       padding: EdgeInsets.all(24.0),
       splashColor: Colors.lightBlueAccent,
       highlightedBorderColor: Colors.cyan,
       onPressed: () => buttonPressed(str),
       child: new Text(
-        str,
-        style: new TextStyle(fontSize: 20.0, fontWeight: FontWeight.bold),
+          str,
+          style: new TextStyle(fontSize: 22.0, fontWeight: FontWeight.bold,),
       ),
       color: Colors.white70,
-    ));
+    ),
+        ));
   }
 
   @override
@@ -105,7 +108,7 @@ class _HomeState extends State<Home> {
       appBar: new AppBar(
         title: Text("Calculator"),
         centerTitle: true,
-        backgroundColor:Colors.green,
+        backgroundColor:Color(0xFF81D4FA),
       ),
       body: Stack(
         fit: StackFit.expand,
@@ -115,7 +118,7 @@ class _HomeState extends State<Home> {
               gradient: LinearGradient(
                 begin: Alignment.topLeft,
                 end: Alignment.bottomLeft,
-                colors: [const Color(0xFFFFFFFF), const Color(0x234cda0F)],
+                colors: [const Color(0xFFFFFFFF), const Color(0x234cdaFF)],
               ),
             ),
           ),
